@@ -43,8 +43,8 @@ export default function CreateTask() {
     console.log(taskData)
     dispatch(createTaskAsync(taskData))
     setTaskData({
-      tName: "",
-      tDes: ""
+      taskName: "",
+      taskDes: ""
     })
     // setOpen(false);
     // // console.log(taskData)
@@ -54,10 +54,10 @@ export default function CreateTask() {
     <form className="space-y-6 pl-3" action="#" method="POST" onSubmit={submitHandler} style={{margin:" 4vh auto",width:"36%"}}>
         <MDBRow className='gy-2 gx-3 d-flex align-items-center' style={{ padding:"auto", display:"flex",justifyContent:"space-between" ,alignItems:"center"}} >
       <MDBCol size='auto'>
-      <MDBInput wrapperClass='mb-4' label='Task Name' id='form1' type='text' name='taskName' value={taskData.tName} onChange={changeHandler}/>
+      <MDBInput wrapperClass='mb-4' label='Task Name' id='form1' type='text' name='taskName' value={taskData.taskName} onChange={changeHandler}/>
       </MDBCol>
       <MDBCol size='auto'>
-      <MDBInput wrapperClass='mb-4' label='Task Description' id='form2' type='text' name='taskDes' value={taskData.tDes} onChange={changeHandler}/>
+      <MDBInput wrapperClass='mb-4' label='Task Description' id='form2' type='text' name='taskDes' value={taskData.taskDes} onChange={changeHandler}/>
       </MDBCol>
       <MDBCol size='auto'>
       <MDBBtn type='submit' className="mb-4 w-100">Submit</MDBBtn>
